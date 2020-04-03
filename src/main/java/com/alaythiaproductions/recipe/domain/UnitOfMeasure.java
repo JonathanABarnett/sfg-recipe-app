@@ -9,10 +9,7 @@ public class UnitOfMeasure {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String unitOfMeasure;
-
-    @OneToOne(fetch = FetchType.EAGER)
-    private Ingredient ingredient;
+    private String description;
 
     public Long getId() {
         return id;
@@ -22,19 +19,11 @@ public class UnitOfMeasure {
         this.id = id;
     }
 
-    public String getUnitOfMeasure() {
-        return unitOfMeasure;
+    public String getDescription() {
+        return description;
     }
 
-    public void setUnitOfMeasure(String unitOfMeasure) {
-        this.unitOfMeasure = unitOfMeasure;
-    }
-
-    public Ingredient getIngredient() {
-        return ingredient;
-    }
-
-    public void setIngredient(Ingredient ingredient) {
-        this.ingredient = ingredient;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
